@@ -239,9 +239,9 @@
 	                    </div>
 	                    <a href="">
 	                        <#if wantedGoods.student.headPic??>
-	                        <img class="enshr_ph" src="/photo/view?filename=${wantedGoods.student.headPic}" alt="${wantedGoods.name}">
+	                        <img class="enshr_ph enshr_hp" src="/photo/view?filename=${wantedGoods.student.headPic}" alt="${wantedGoods.name}">
 	                        <#else>
-	                        <img class="enshr_ph" src="/home/imgs/avatar1.png" alt="${wantedGoods.name}">
+	                        <img class="enshr_ph enshr_hp" src="/home/imgs/avatar1.png" alt="${wantedGoods.name}">
 	                        </#if>
 	                    </a>
                 </div>

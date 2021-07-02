@@ -10,9 +10,9 @@
             </li>
             </#list>
             </#if>
-            <li class="first">
-                <a href="/system/login" target="_blank" class="links">登录后台</a>
-            </li>
+<#--            <li class="first">-->
+<#--                <a href="/system/login" target="_blank" class="links">登录后台</a>-->
+<#--            </li>-->
         </ul>
     </div>
     <div class="site-msg line2">

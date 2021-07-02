@@ -7,7 +7,7 @@
 
 </head>
 <body>
-<h1 style="color: #4BC0A5">${siteName!""}<sup>2020</sup></h1>
+<h1 >${siteName!""}</h1>
 
 <div class="login" style="margin-top:50px;">
     
@@ -32,16 +32,16 @@
 				<form action="login" name="loginform" accept-charset="utf-8" id="login_form" class="loginForm" 
                     method="post">
                 <div class="uinArea" id="uinArea">
-                <label class="input-tips" for="id">学号：</label>
+<#--                <label class="input-tips" for="id">学号：</label>-->
                 <div class="inputOuter" id="uArea">
-                    <input type="text" id="login-sn" name="sn" class="inputstyle" value=""/>
+                    <input type="text" id="login-sn" name="sn" class="inputstyle" placeholder="学号"/>
                 </div>
                 </div>
                 <div class="pwdArea" id="pwdArea">
-               <label class="input-tips" for="pwd">密码：</label> 
+<#--               <label class="input-tips" for="pwd">密码：</label> -->
                <div class="inputOuter" id="pArea">
                     
-                    <input type="password" id="pwd" name="password" class="inputstyle"/>
+                    <input type="password" id="pwd" name="password" class="inputstyle" placeholder="密码"/>
                 </div>
                 </div>
                
@@ -114,6 +114,6 @@
     </div>
     <!--注册end-->
 </div>
-<div class="jianyi">*推荐使用ie8或以上版本ie浏览器或Chrome内核浏览器访问本站</div>
+<#--<div class="jianyi">*推荐使用ie8或以上版本ie浏览器或Chrome内核浏览器访问本站</div>-->
 </body>
 </html>

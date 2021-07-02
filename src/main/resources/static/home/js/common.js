@@ -1,3 +1,12 @@
+window.alert =alert;
+function alert(e){
+    $("body").append('<div id="msg"><div id="msg_top"><span class="msg_close">×</span></div><div id="msg_cont">'+e+'</div><div class="msg_close" id="msg_clear">确定</div></div>');
+    $(".msg_close").click(function (){
+        $("#msg").remove();
+    });
+}
+
+
 var zb_cookie = {
     setCookie:function(name,value,iTime){
         if(arguments.length==2){
@@ -533,4 +542,5 @@ function ajaxRequest(url,requestType,data,callback){
 			alert('网络错误!');
 		}
 	});
+
 }

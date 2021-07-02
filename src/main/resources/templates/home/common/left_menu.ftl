@@ -1,4 +1,4 @@
-    <nav class="ease2">
+    <nav class="ease2 ease3">
     <ul>
         <li class="blank-head">
             <a href="/home/index/index"></a>

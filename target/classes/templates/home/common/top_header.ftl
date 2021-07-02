@@ -23,13 +23,13 @@
 	    </a>
 	    <div class="header-main center ease2">
 	        <a href="/home/index/index" class="slogan">
-	            <h1 class="s-main"></h1>
-	            <div class="s-submain"></div>
-	            <#if siteSetting.logo1??>
+<#--	            <h1 class="s-main"></h1>-->
+<#--	            <div class="s-submain"></div>-->
+<#--	            <#if siteSetting.logo1??>-->
 		        <img src="/photo/view?filename=${siteSetting.logo2}" alt="${siteSetting.siteName!""}">
-		        <#else>
-	            <img src="/home/imgs/2shoujie_web_title.png" alt="${siteSetting.siteName!""}">
-	        	</#if>
+<#--		        <#else>-->
+<#--	            <img src="/home/imgs/2shoujie_web_title.png" alt="${siteSetting.siteName!""}">-->
+<#--	        	</#if>-->
 	        </a>
 	        <div class="search-box-wr ease2">
 	            <div class="search-box center" >

@@ -3,11 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, goodsCategory-scalable=no" />
-<title>${siteName!""}|物品评论管理-${title!""}</title>
+<title>中原工学院二手交流平台|物品评论管理-${title!""}</title>
 <#include "../common/header.ftl"/>
 <style>
 td{
 	vertical-align:middle;
+}
+.table-bordered img{
+    object-fit: contain;
 }
 </style>
 </head>

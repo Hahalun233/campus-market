@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-<title>${siteName!""}|友情链接管理-添加友情链接</title>
+<title>中原工学院二手交流平台|友情链接管理-添加友情链接</title>
 <#include "../common/header.ftl"/>
 
 </head>

@@ -1,4 +1,8 @@
 
+::-webkit-scrollbar {
+    width: 6px;   /* 滚动条宽度， width：对应竖滚动条的宽度  height：对应横滚动条的高度*/
+}
+
 html, body, div, header, footer, form, p, input, button, h1, h2, h3, h4, h5, h6, ul, li, img, textarea { margin: 0px; border: 0px none; padding: 0px; outline: medium none; }
 ul, li { list-style: outside none none; }
 article, aside, dialog, footer, header, section, footer, nav, figure, menu { display: block; }
@@ -6,12 +10,13 @@ article, aside, dialog, footer, header, section, footer, nav, figure, menu { dis
 .group {  }
 a { text-decoration: none; transition: all 0.2s ease-in-out 0s; }
 .ershou-favorite, .enshr_ph, .photo-wr img, .release-button, .search-submit, .page-num { transition: all 0.2s ease-in-out 0s; }
-
+.enshr_ph{object-fit: contain}
 body { position: relative; min-width: 960px; font-family: "Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei","SimSun",Arial,sans-serif; font-size: 12px; color: rgb(18, 18, 18); height: 100%; }
 .clearfix::after { content: ""; width: 0px; height: 0px; display: block; visibility: hidden; clear: both; }
 .clearfix {  }
 .container { min-width: 960px; padding-top: 120px; background-color: rgb(227, 238, 236); }
 .ease2 { transition: all 0.2s linear 0s; }
+.ease3 {overflow: auto}
 .wave { display: none; position: absolute; left: 0px; width: 40px; height: 9px; margin-top: 5px; background: transparent url('../imgs/wave.png') repeat scroll 0px 0px; }
 .cur1 .wave { background-position: 0px 0px; }
 
@@ -19,13 +24,13 @@ a { transition: color 0.2s ease 0s; }
 header { width: 100%; min-width: 960px; height: 120px; position: fixed; left: 0px; top: 0px; z-index: 99; overflow: visible; background-color: rgb(255, 255, 255); box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1); }
 .logo { width: 120px; height: 120px; position: absolute; left: 0px; top: 0px; }
 .center { margin: 0px auto; }
-.header-main { width: 960px; padding-top: 25px; position: relative; margin-left: 15%; }
-.slogan { display: block; position: absolute; left: 0px; width: 179px; height: 61px; text-decoration: none; }
+.header-main { width: 960px; padding-top: 25px; position: relative; margin-left: 12%; }
+.slogan { display: block; position: absolute; left: 0px; width: 179px; height: 61px; text-decoration: none; top: 48px;}
 .s-main, .s-submain { text-indent: -9999em; }
-.slogan img { position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; }
+.slogan img { position: absolute; left: 0px; top: 0px; width: 100%; height: auto; }
 .s-main { font-size: 3em; font-weight: 400; color: rgb(75, 191, 165); }
 .s-submain { font-size: 1.33em; color: rgb(255, 178, 0); text-align: center; }
-.search-box-wr { width: 50%; margin: 0px auto; padding-top: 5px; }
+.search-box-wr { width: 50%; margin: 0px auto 0px 20%; padding-top: 5px; }
 .search-box { width: 100%; height: 50px; border: 1px solid rgb(68, 193, 165); border-radius: 25px; font-size: 1.33em; color: rgb(75, 192, 165); overflow: hidden; }
 .search-submit { float: right; width: 24.13%; height: 100%; background-color: rgb(100, 203, 179); font-size: 16px; color: rgb(255, 255, 255); cursor: pointer; }
 .search-submit:hover { background: rgb(62, 177, 150) none repeat scroll 0% 0%; }
@@ -169,22 +174,28 @@ div.center { position: relative; }
 
 
 
-#release-button1 {width: 140px;height: 52px; text-align:center;line-height:48px;font-size:24px;font-family: Arial, "宋体";background-position: center center; background-color: #FF0033;}
-#release-button1:hover{background: rgb(75,192,165);}
-#release-button2 {width: 140px;height: 52px; text-align:center;line-height:48px;font-size:24px;font-family: Arial, "宋体";background-position: center center; background-color: #FFB300;}
-#release-button2:hover{background: rgb(75,192,165);}
-#release-button3 {width: 140px;height: 52px; text-align:center;line-height:48px;font-size:24px;font-family: Arial, "宋体";background-position: center center; background-color: #4BC00F;}
-#release-button3:hover{background: rgb(75,192,165);}
+.release-button1 {width: 140px;height: 52px; text-align:center;line-height:48px;font-size:24px;font-family: Arial, "宋体";background-position: center center; background-color: #FF0033;border-radius: 12px;}
+.release-button1:hover{background: rgb(75,192,165);}
+.release-button2 {width: 140px;height: 52px; text-align:center;line-height:48px;font-size:24px;font-family: Arial, "宋体";background-position: center center; background-color: #FFB300;border-radius: 12px;}
+.release-button2:hover{background: rgb(75,192,165);}
+.release-button3 {width: 140px;height: 52px; text-align:center;line-height:48px;font-size:24px;font-family: Arial, "宋体";background-position: center center; background-color: #4BC00F;border-radius: 12px;}
+.release-button3:hover{background: rgb(75,192,165);}
 .item-list { width: 100%; margin-bottom: 60px; }
-.items { font-size: 0px; list-style: outside none none; text-align: justify; text-align-last: justify; }
+.items { font-size: 0px; list-style: outside none none;}
+/*.items { text-align: justify; text-align-last: justify; }*/
+.items { text-align: left;}
+
 .items::after { content: ""; display: inline-block; width: 100%; }
 .item { display: inline-block; position: relative; width: 200px; height: 265px; margin-bottom: 20px; font-size: 12px; text-align: left; }
+
+.item{margin-right: 10px;}
+
 .item.fixed { height: 0px; margin: 0px; padding: 0px; font-size: 0px; line-height: 0; }
 .item .img { display: block; width: 100%; height: 200px; }
-.img img { width: 100%; height: 100%; }
+.img img { width: 100%; height: 100%; background: white;object-fit: contain}
 .item .info { padding: 10px; background-color: rgb(255, 255, 255); overflow: hidden; text-overflow: ellipsis; }
 .info > div { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; overflow-wrap: break-word; word-break: break-all; }
-.info .price { padding-right: 3px; width: 57px; height: 30px; background-color: rgb(235, 80, 85); position: absolute; top: 5px; right: -5px; font-size: 16px; color: rgb(255, 255, 255); line-height: 30px; vertical-align: middle; text-align: center; overflow: visible; }
+.info .price { padding-right: 3px; width: auto; height: 30px; background-color: rgb(235, 80, 85); position: absolute; top: 5px; right: -5px; font-size: 16px; color: rgb(255, 255, 255); line-height: 30px; vertical-align: middle; text-align: center; overflow: visible; }
 .info .price::before { content: "￥"; }
 .info .name { margin-bottom: 6px; width: 100%; height: 1.6em; line-height: 1.6em; font-size: 15px; }
 .name a { color: rgb(27, 129, 108); text-decoration: none; }
@@ -270,3 +281,53 @@ div.center { position: relative; }
 #have_login { height: 50px; }
 .avatar { float: left; border: 1px solid rgb(75, 192, 165); padding: 3px; width: 40px; height: 40px; border-radius: 100%; }
 .person_name { float: left; color: rgb(0, 172, 144); margin: 15px 0px 0px 15px; max-width: 75px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
+#msg{
+    width: 266px;
+    position: fixed;
+    z-index:999;
+    top: 20%;
+    margin-top:-80px;
+    left:50%;
+    margin-left:-133px;
+    background:#fff;
+    box-shadow:5px 5px 8px #999;
+    font-size: 17px;
+    color: #666;
+    border:1px solid #f8f8f8;
+    text-align: center;
+    line-height: 2rem;
+    display:inline-block;
+    padding-bottom:20px;
+    border-radius:2px;
+}
+#msg_top{
+    background:#f8f8f8;
+    padding:5px 15px 5px 20px;
+    text-align:left;
+}
+#msg_top span{
+    font-size: 22px;
+    float: right;
+    cursor: pointer;
+}
+#msg_cont{
+    padding:15px 20px 20px;
+    text-align: left;
+}
+ #msg_clear{
+     /* display:inline-block; */
+     color:rgb(255, 255, 255);
+     padding:1px 15px;
+     background:#8fc31f;
+     border-radius: 2px;
+     float: right;
+     margin-right:15px;
+     cursor:pointer;
+ }
+ #msg_input{
+     padding: 8px;
+     border: 2px solid#ccc;
+     margin: 10px;
+     border-radius: 10px;
+     width: 200px;display: inline-block;
+ }

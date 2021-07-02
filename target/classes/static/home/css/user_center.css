@@ -17,13 +17,16 @@ a { transition: color 0.2s ease 0s; }
 header { width: 100%; min-width: 960px; height: 120px; position: fixed; left: 0px; top: 0px; z-index: 99; overflow: visible; background-color: rgb(255, 255, 255); box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1); }
 .logo { width: 120px; height: 120px; position: absolute; left: 0px; top: 0px; }
 .center { margin: 0px auto; }
-.header-main { width: 960px; padding-top: 25px; position: relative; margin-left: 15%; }
+.header-main { width: 960px; padding-top: 25px; position: relative;}
+.header-main { margin-left: 12%; }
 .slogan { display: block; position: absolute; left: 0px; width: 179px; height: 61px; text-decoration: none; }
 .s-main, .s-submain { text-indent: -9999em; }
-.slogan img { position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; }
+.slogan img { position: absolute; left: 0px; top: 0px; width: 100%;  }
+/*.slogan img {height: 100%; }*/
 .s-main { font-size: 3em; font-weight: 400; color: rgb(75, 191, 165); }
 .s-submain { font-size: 1.33em; color: rgb(255, 178, 0); text-align: center; }
-.search-box-wr { width: 50%; margin: 0px auto; padding-top: 5px; }
+.search-box-wr { width: 50%;  padding-top: 5px; }
+/*.search-box-wr {margin: 0px auto;}*/
 .search-box { width: 100%; height: 50px; border: 1px solid rgb(68, 193, 165); border-radius: 25px; font-size: 1.33em; color: rgb(75, 192, 165); overflow: hidden; }
 .search-submit { float: right; width: 24.13%; height: 100%; background-color: rgb(100, 203, 179); font-size: 16px; color: rgb(255, 255, 255); cursor: pointer; }
 .search-submit:hover { background: rgb(62, 177, 150) none repeat scroll 0% 0%; }
@@ -224,6 +227,7 @@ div.center { position: relative; }
 .onsaling, .auto_out { color: rgb(255, 178, 0); font: 12px "Microsoft YaHei"; }
 .enshr_ph { width: 140px; height: 140px; }
 .enshr_ph:hover { opacity: 0.85; }
+.enshr_hp { width: 100px; height: 100px; margin: 10px}
 .ershou-favorite, .enshr_ph, .photo-wr img, .release-button, .search-submit, .page-num { transition: all 0.2s ease-in-out 0s; }
 div.center { position: relative; }
 

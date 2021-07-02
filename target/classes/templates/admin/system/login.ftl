@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-<title>登录页面 - ${siteName!""}</title>
+<title>登录页面 - 中原工学院二手交流平台</title>
 <#include "../common/header.ftl"/>
 <style>
 .lyear-wrapper {
@@ -49,7 +49,8 @@
   <div class="lyear-login">
     <div class="login-center">
       <div class="login-header text-center">
-        <a href=""> <img alt="light year admin" src="/admin/images/logo-sidebar.png"></a>
+<#--        <a href=""> <img alt="light year admin" src="/admin/images/logo-sidebar.png"></a>-->
+      <h1>后台管理系统</h1>
       </div>
       <form id="login-form" method="post">
         <div class="form-group has-feedback feedback-left">
@@ -74,9 +75,9 @@
         </div>
       </form>
       <hr>
-      <footer class="col-sm-12 text-center">
-        <p class="m-b-0">Copyright © 2020 <a href="${siteUrl!""}">【猿来入此】</a>. All right reserved</p>
-      </footer>
+<#--      <footer class="col-sm-12 text-center">-->
+<#--        <p class="m-b-0">Copyright © 2020 <a href="${siteUrl!""}">【猿来入此】</a>. All right reserved</p>-->
+<#--      </footer>-->
     </div>
   </div>
 </div>

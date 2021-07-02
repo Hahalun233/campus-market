@@ -49,12 +49,12 @@
                         		<span class="real-time"id="creat_time">${goods.createTime!""}</span>
                         	</div>
                         </li>
-                        <li class="ershou-place">
-                        	<div class="name">
-                        		<span>交易地点</span>
-                        	</div>
-                        	<div class="value">${goods.student.school!"该用户未填写学校信息"}</div>
-                        </li>
+<#--                        <li class="ershou-place">-->
+<#--                        	<div class="name">-->
+<#--                        		<span>交易地点</span>-->
+<#--                        	</div>-->
+<#--                        	<div class="value">${goods.student.school!"该用户未填写学校信息"}</div>-->
+<#--                        </li>-->
                         <li class="ershou-cert">
                         	<div class="name">
                         		<span>学院</span>
@@ -167,7 +167,7 @@
 $(document).ready(function(){
    $("#buy-button").click(function(){
 		<#if ylrc_student??>
-		alert("请您联系卖家购买商品。"+"\n"+"电话:${ylrc_student.mobile!""}\n"+"QQ:${ylrc_student.qq!""}");
+		alert("请您联系卖家购买商品。"+"<br/>"+"电话:${ylrc_student.mobile!""}<br/>"+"QQ:${ylrc_student.qq!""}");
 		<#else>
 		alert("请您先登录");
 		window.location.href="/home/index/login";
@@ -187,7 +187,7 @@ $(document).ready(function(){
 		if($("#submit-comment-btn").attr('data-reply') != '0'){
 			data.replyTo = $("#submit-comment-btn").attr('data-reply');
 			data.content = data.content.replace('回复：' + data.replyTo + ':','')
-			data.content = '回复：“' + $("#submit-comment-btn").attr('data-reply-content') + '”<br>' + data.content;
+			// data.content = '回复：“' + $("#submit-comment-btn").attr('data-reply-content') + '”<br>' + data.content;
 		}
 		ajaxRequest('/home/student/comment','post',data,function(){
 			alert('评论成功');
@@ -197,19 +197,38 @@ $(document).ready(function(){
 	
 	$(".rpl").click(function(){
 		$("#comment-content").val('回复：'+$(this).attr('data-name') + ':')
-		$("#submit-comment-btn").attr('data-reply',$(this).attr('data-name'))
+        $("#submit-comment-btn").attr('data-reply',$(this).attr('data-name'))
 		$("#submit-comment-btn").attr('data-reply-content',$(this).attr('data-reply'))
 	});
 });
 function report(id){
-	var content = prompt("请输入举报原因");
-	if(content == null || content == ''){
-		alert('请填写举报原因');
-		return;
-	}
-	ajaxRequest('/home/student/report_goods','post',{'goods.id':id,content:content},function(){
-		alert('举报成功');
-	});
+    $("body").append('<div id="msg"><div id="msg_top"><span class="msg_close">×</span></div><div id="msg_cont">'+"请输入举报原因"+'</div><div><input id="msg_input"></div><div id="msg_clear">确定</div></div>');
+
+    $(".msg_close").click(function (){
+        $("#msg").remove();
+        alert('请填写举报原因');
+        return;
+    });
+    $("#msg_clear").click(function (){
+        var content = $("#msg_input").val();
+        $("#msg").remove();
+        if(content == null || content == ''){
+            alert('请填写举报原因');
+            return;
+        }
+        ajaxRequest('/home/student/report_goods','post',{'goods.id':id,content:content},function(){
+            alert('举报成功');
+        });
+        return;
+    });
+	// prompt("请输入举报原因");
+	// if(content == null || content == ''){
+	// 	alert('请填写举报原因');
+	// 	return;
+	// }
+	// ajaxRequest('/home/student/report_goods','post',{'goods.id':id,content:content},function(){
+	// 	alert('举报成功');
+	// });
 }
 </script>	
 </html>

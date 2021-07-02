@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-<title>${siteName!""}|新闻公告管理-编辑新闻公告</title>
+<title>中原工学院二手交流平台|新闻公告管理-编辑新闻公告</title>
 <#include "../common/header.ftl"/>
 
 </head>
@@ -16,7 +16,7 @@
       
       <!-- logo -->
       <div id="logo" class="sidebar-header">
-        <a href="index.html"><img src="/admin/images/logo-sidebar.png" title="${siteName!""}" alt="${siteName!""}" /></a>
+          <h2>后台管理系统</h2>
       </div>
       <div class="lyear-layout-sidebar-scroll"> 
         <#include "../common/left-menu.ftl"/>
