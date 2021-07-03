@@ -4,7 +4,11 @@
 <link href="/home/css/login2.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="/home/js/jquery-3.1.1.min.js"></script>
 <script type="text/javascript" src="/home/js/login.js"></script>
-
+<style>
+    #hd{
+        display: none;
+    }
+</style>
 </head>
 <body>
 <h1 >${siteName!""}</h1>
@@ -66,7 +70,10 @@
         <ul class="reg_form" id="reg-ul">
         		<div id="userCue" class="cue">快速注册请注意格式</div>
                 <li>
-                	
+<#--                    <div class="inputOuter2">-->
+<#--                        <input type="password" id="password"  name="password" maxlength="16" class="inputstyle2"/>-->
+<#--                    </div>-->
+
                     <label for="user"  class="input-tips2">学号：</label>
                     <div class="inputOuter2">
                         <input type="text" id="user-sn" name="sn" maxlength="12" class="inputstyle2"/>
@@ -97,6 +104,34 @@
                     </div>
                    
                 </li>
+
+<#--            添加昵称-->
+            <li id="hd">
+                <div class="inputOuter2">
+                    <input type="text" id="nickname" name="nickname" maxlength="10" class="inputstyle2" type="hidden" value=""/>
+                </div>
+
+            </li>
+            <li id="hd">
+                <div class="inputOuter2">
+                    <input type="text" id="academy" name="academy" maxlength="10" class="inputstyle2" type="hidden" value=""/>
+                </div>
+            </li>
+            <li id="hd">
+                <div class="inputOuter2">
+                    <input type="text" id="grade" name="grade" maxlength="10" class="inputstyle2" type="hidden" value=""/>
+                </div>
+            </li>
+            <li id="hd">
+                <div class="inputOuter2">
+                    <input type="text" id="school" name="school" maxlength="10" class="inputstyle2" type="hidden" value=""/>
+                </div>
+            </li>
+            <li id="hd">
+                <div class="inputOuter2">
+                    <input type="text" id="mobile" name="mobile" maxlength="10" class="inputstyle2" type="hidden" value=""/>
+                </div>
+            </li>
                 
                 <li>
                     <div class="inputArea">
